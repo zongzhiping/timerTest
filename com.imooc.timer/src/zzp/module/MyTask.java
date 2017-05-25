@@ -1,7 +1,5 @@
 package zzp.module;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.TimerTask;
 
 /**
@@ -9,6 +7,7 @@ import java.util.TimerTask;
  */
 public class MyTask extends TimerTask {
 
+    private int count=0;
     public String name;
 
     public MyTask(){}
@@ -19,11 +18,17 @@ public class MyTask extends TimerTask {
 
     @Override
     public void run() {
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd  HH:mm:ss");
-        String dataStr = sd.format(calendar.getTime());
-        System.out.println("The Curr Thread is "+name);
-        System.out.println("The time is"+dataStr);
+//        if(count<3){
+//            Calendar calendar = Calendar.getInstance();
+//            SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd  HH:mm:ss");
+//            String dataStr = sd.format(calendar.getTime());
+//            System.out.println("The Curr Thread is "+name);
+//            System.out.println("The time is"+dataStr);
+//            count++;
+//        }else{
+//            cancel();
+//            System.out.println("the task is cancled!");
+//        }
     }
 
     public String getName() {
